@@ -8,30 +8,25 @@ define({
         },
         insert: {at: 'dom.first!.wrapper'}
     },
-    moduleA: {
-        create: {
-            module: 'source/modules/moduleA/moduleA'
-        }
-    },
-    
-    getCirclesService: {
-        compose: 'moduleA.service'
-    },
-    
-    moduleB: {
-        create: {
-            module: 'source/modules/moduleB/moduleB',
-            args: [
-                {$ref: 'moduleA'},
-                {$ref: 'getCirclesService'}
-            ]
-        }
-    },
     shapeModule: {
         create: {
             module: 'source/modules/shapeModule/shapeModule',
             args: [
                 {$ref: 'shell'}
+            ]
+        }
+    },
+    formModule: {
+        create: {
+            module: 'source/modules/formModule/formModule'
+        }
+    },
+    
+    statModule: {
+        create: {
+            module: 'source/modules/statModule/statModule',
+            args: [
+                {$ref: 'formModule'}
             ]
         }
     },
