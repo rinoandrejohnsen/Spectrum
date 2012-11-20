@@ -1,0 +1,21 @@
+{
+  "name": "sizzle",
+  "author": "John Resig",
+  "description": "A sizzlin' hot selector engine",
+  "licenses": [
+     {
+         "type": "MIT",
+         "url": "http://www.opensource.org/licenses/mit-license.php"
+     },
+     {
+         "type": "BSD",
+         "url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L13"
+     },
+     {
+         "type": "GPL",
+         "url": "http://www.gnu.org/licenses/gpl.html"
+     }
+  ],
+  "main": "./sizzle",
+  "icon": "http://packages.dojofoundation.org/images/sizzle.png"
+}
