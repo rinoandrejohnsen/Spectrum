@@ -1,7 +1,6 @@
 define(['source/common/infrastructure/event'], function(Event) {   
     
     function ListModel(items) {
-        debugger;
         this._items = items;
         this._selectedIndex = -1;
 

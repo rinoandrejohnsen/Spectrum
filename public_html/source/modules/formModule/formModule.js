@@ -2,7 +2,7 @@ define(['source/common/infrastructure/module'], function(module) {
     
     formModule.prototype = new module();
         
-    function formModule() {
+    function formModule(service) {
         try {
             curl(['wire!source/modules/formModule/formModule.spec']);
         }

@@ -1,32 +1,44 @@
 define({
     theme: {module: 'css!source/spectrum/resources/styles/theme.css'},
     shell: {
-        render: {
-            template: {module: 'text!source/spectrum/resources/templates/shellTemplate.html'},
-            replace: {module: 'i18n!source/common/infrastructure/constants'},
-            css: {module: 'css!source/spectrum/resources/styles/shellStyle.css'}
-        },
-        insert: {at: 'dom.first!.wrapper'}
+        create: {
+            module: 'source/spectrum/shell',
+            args: [
+                {$ref: 'shellView'}
+            ]
+        }
+    },
+    shellView: {
+        wire: {
+            spec: 'source/spectrum/views/shellView.spec'
+        }
+    },
+    service : {
+        create: {
+            module: 'source/common/infrastructure/service'
+        }
     },
     shapeModule: {
         create: {
             module: 'source/modules/shapeModule/shapeModule',
             args: [
-                {$ref: 'shell'}
+                {$ref: 'service'}
             ]
         }
     },
     formModule: {
         create: {
-            module: 'source/modules/formModule/formModule'
+            module: 'source/modules/formModule/formModule',
+            args: [
+                {$ref: 'service'}
+            ]
         }
-    },
-    
+    },   
     statModule: {
         create: {
             module: 'source/modules/statModule/statModule',
             args: [
-                {$ref: 'formModule'}
+                {$ref: 'service'}
             ]
         }
     },

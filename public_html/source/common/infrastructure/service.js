@@ -1,10 +1,10 @@
 define(function() {
 
-    function Module() {
+    function Service() {
         this.fns = [];
     }
     
-    Module.prototype = {
+    Service.prototype = {
         add : function(fn) {
             this.fns.push(fn);
         },
@@ -19,5 +19,5 @@ define(function() {
         }
     };
 
-    return Module;
+    return Service;
 });

@@ -1,10 +1,11 @@
 define({
     view: {
         render: {
-            template: {module: 'text!source/modules/statModule/resources/templates/statTemplate.html'},
-            css: {module: 'css!source/modules/statModule/resources/styles/statStyle.css'}
+            template: {module: 'text!source/spectrum/resources/templates/shellTemplate.html'},
+            replace: {module: 'i18n!source/common/infrastructure/constants'},
+            css: {module: 'css!source/spectrum/resources/styles/shellStyle.css'}
         },
-        insert: {at: 'dom.first!footer'}
+        insert: {at: 'dom.first!.wrapper'}
     },
     plugins: [
         {
