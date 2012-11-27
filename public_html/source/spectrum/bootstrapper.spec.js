@@ -13,35 +13,6 @@ define({
             spec: 'source/spectrum/views/shellView.spec'
         }
     },
-    service : {
-        create: {
-            module: 'source/common/infrastructure/service'
-        }
-    },
-    shapeModule: {
-        create: {
-            module: 'source/modules/shapeModule/shapeModule',
-            args: [
-                {$ref: 'service'}
-            ]
-        }
-    },
-    formModule: {
-        create: {
-            module: 'source/modules/formModule/formModule',
-            args: [
-                {$ref: 'service'}
-            ]
-        }
-    },   
-    statModule: {
-        create: {
-            module: 'source/modules/statModule/statModule',
-            args: [
-                {$ref: 'service'}
-            ]
-        }
-    },
     plugins: [
         {
             module: 'wire/debug', 

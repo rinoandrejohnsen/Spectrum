@@ -1,10 +1,12 @@
-define(['source/common/infrastructure/model'], function(model) {
+define(['source/common/infrastructure/observableCollection'], function(Collection) {
     
     //shapeModule.prototype = new model(['PHP', 'JavaScript']);
 
-    function shapeModule(shapeRegion) {
+    function shapeModule() {      
         try {
             curl(['wire!source/modules/shapeModule/shapeModule.spec'], function(context) {
+                debugger;
+                
                 context.wire({
                     plugins: [
                         {
@@ -26,6 +28,6 @@ define(['source/common/infrastructure/model'], function(model) {
             console.log("Error wiring the bootstrapper. Message: " + error + ".");
         }
     }
-
+    
     return shapeModule;
 });
