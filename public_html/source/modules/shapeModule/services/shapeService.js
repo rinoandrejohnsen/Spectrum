@@ -1,7 +1,6 @@
 define(function() {
 
     function ShapeService(shapeCollection, test) {
-        debugger;
         this.collection = shapeCollection;
     }
 

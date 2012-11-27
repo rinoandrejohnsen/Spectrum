@@ -16,7 +16,6 @@ define(function() {
             );
         },
         fire: function(o, thisObj) {
-            debugger;
             var scope = thisObj || window;
             this.fns.forEach(
                 function(el) {

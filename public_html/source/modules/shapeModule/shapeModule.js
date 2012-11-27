@@ -5,7 +5,6 @@ define(['source/common/infrastructure/observableCollection'], function(Collectio
     function shapeModule() {      
         try {
             curl(['wire!source/modules/shapeModule/shapeModule.spec'], function(context) {
-                debugger;
                 
                 context.wire({
                     plugins: [

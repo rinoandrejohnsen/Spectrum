@@ -11,15 +11,9 @@ define(['source/common/infrastructure/event'], function(Event) {
         var _this = this;
 
         // attach model listeners
-        this._model.itemAdded.attach(function() {
+        this._model.collectionChanged.attach(function() {
             _this.rebuildList();
         });
-        this._model.itemRemoved.attach(function() {
-            _this.rebuildList();
-        });
-
-        // attach listeners to HTML controls
-        
     }
 
     circleView.prototype = {

@@ -9,7 +9,6 @@ define(['source/common/infrastructure/module'], function(module) {
         rino.addItem("circle");
         rino.addItem("circle2");
         rino.addItem("circle3");
-        debugger;
         //var rino = service.getCollection();
         
         try {

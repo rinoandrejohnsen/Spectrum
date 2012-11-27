@@ -19,21 +19,15 @@ define({
         create: {
             module: 'source/modules/shapeModule/services/shapeService',
             args: [
-                {$ref: 'shapeCollection'},
-                {$ref: 'test'}
+                {$ref: 'shapeCollection'}
             ]
-        }
-    },
-    test: {
-        create: {
-            module: 'source/common/infrastructure/test'
         }
     },
     view: {
         create: {
             module: 'source/modules/shapeModule/views/circleView',
             args: [
-                {$ref: 'model'},
+                {$ref: 'shapeCollection'},
                 {$ref: 'myReferenceData'}
             ]
         },
@@ -59,6 +53,7 @@ define({
             classes: {init: 'loading'}
         },
         {module: 'wire/domReady'},
-        {module: 'wire/dom/render'}
+        {module: 'wire/dom/render'},
+        {module: 'wire/connect'}
     ]
 });

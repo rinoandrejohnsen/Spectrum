@@ -9,7 +9,6 @@ define(['source/common/infrastructure/observableCollection'], function(Observabl
     
     ShapeCollection.prototype.addCircle = function(circle) {
         this.addItem(circle);
-        debugger;
     };
     
     return ShapeCollection;
