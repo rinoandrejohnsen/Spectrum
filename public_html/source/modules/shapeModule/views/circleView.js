@@ -1,6 +1,7 @@
 define(['source/common/infrastructure/event'], function(Event) {
 
     function circleView(model, elements) {
+        debugger;
         this._model = model;
         this._elements = elements;
 

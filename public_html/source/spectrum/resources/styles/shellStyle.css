@@ -1,4 +1,4 @@
-.shell {
+.wrapper {
     margin: 2em auto;
     text-align: center;
     width: 960px;
@@ -6,35 +6,35 @@
     margin-right:auto;
 }
 
-.shell h1 {
+.wrapper h1 {
     margin-bottom: 0;
 }
 
-.shell p {
+.wrapper p {
     margin-top: 0;
     margin-bottom: 40px;
 }
 
-.shell table {
+.wrapper table {
     margin-left:auto;
     margin-right:auto;
 }
 
-.shell section {
+.wrapper section {
     float: left;
     width:660px;
 }
 
-.shell aside {
+.wrapper aside {
     float: left;
     width: 300px;
 }
 
-.shell footer {
+.wrapper footer {
     clear: both;
     padding-top: 40px;
 }
 
-.shell .module {
+.wrapper .module {
     padding: 5px;
 }
