@@ -13,8 +13,8 @@
     };
 
     try {
-        curl(config, ['source/spectrum/bootstrapper'], function(bootstrapper) {
-            new bootstrapper();
+        curl(config, ['wire!source/spectrum/bootstrapper'], function(context) {
+            // We should be good now!
         });
     }
     catch (error) {
